@@ -1,0 +1,2 @@
+What is adhoc command in ansible?
+	it is ansible command line to run modules against nodes directly, instead of playbooks. some urgency purposes.

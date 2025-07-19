@@ -11,7 +11,7 @@
 
 need to install Ansible on one machine — this will act as the Ansible control node.
 
-ansible is push based and also pull latest architecture, while puppet,chef,... are pull  based 
+ansible is push based and also pull in latest architecture, while puppet,chef,... are pull  based 
 
 push vs pull
 ---------------
@@ -37,3 +37,92 @@ $ ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=Dev
 $ ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m dnf -a "name=nginx state=installed"
 -b --> become root
 
+
+4)
+        XML
+        -----------
+        <Student>
+            <Name>Sivakumar</Name>
+            <DOB>2020-01-01</DOB>
+            <Address>Gandhi Nagar, KR Puram, Bengaluru</Address>
+        </Student>
+
+        <Students>
+            <Student>
+                <Name>Sivakumar</Name>
+                <DOB>2020-01-01</DOB>
+                <Addresses>
+                    <PermAddress>
+                        <AddressLine1>D-203</AddressLine1
+                        <AddressLine2>Sai Apartments</AddressLine2>
+                        <Stree>Gandi Nagar</Street>
+                    </PermAddress>
+                    <CurrentAddress>
+                        <AddressLine1>D-203</AddressLine1
+                        <AddressLine2>Sai Apartments</AddressLine2>
+                        <Stree>Gandi Nagar</Street>
+                    </CurrentAddress>		
+                </Addresses>
+            </Student>
+            <Student>
+                <Name>Sivakumar</Name>
+                <DOB>2020-01-01</DOB>
+                <Addresses>
+                    <PermAddress>
+                        <AddressLine1>D-203</AddressLine1
+                        <AddressLine2>Sai Apartments</AddressLine2>
+                        <Stree>Gandi Nagar</Street>
+                    </PermAddress>
+                    <CurrentAddress>
+                        <AddressLine1>D-203</AddressLine1
+                        <AddressLine2>Sai Apartments</AddressLine2>
+                        <Stree>Gandi Nagar</Street>
+                    </CurrentAddress>		
+                </Addresses>
+            </Student>
+        </Students>
+
+        JSON --> Java script object notation
+        -----------------------------------
+        {
+            "Username": "sivakumar",
+            "Password": "admin123",
+            "DoorNo": 123
+        }
+
+
+        {
+            "name": "sivakumar",
+            "dob": "2020-01-01",
+            "address": "D-203, Gandhi Nagar, Bang"
+        }
+
+
+    [] --> list
+    {} --> map/dictionary
+
+-------------------------
+
+    {
+        "name": "sivakumar",
+        "lname": "reddy",
+        "dob": "10-10-10"
+        "address": [
+            {
+                "addressline-1": "D-203",
+			    "addressline-2": "gandhi nagar",
+			    "city": "bang"
+            }
+            {
+                "addressline-1": "D-203",
+			    "addressline-2": "gandhi nagar",
+			    "city": "bang"
+            }
+
+        ]
+
+    }
+
+
+
+yaml --> 
