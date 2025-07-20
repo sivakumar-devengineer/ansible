@@ -1,0 +1,39 @@
+- name: vars from files
+  hosts: localhost
+  vars_files:
+  - vars.yml 
+  tasks:
+  - name: varibles from vars.yml file 
+    ansible.builtin.debug:
+      debug: "This course is {{Course}}, and learning {{Trainer}}, duration is {{Duration}}"
+
+- name: variables from prompt 
+  hosts: localhost 
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your name 
+    private: false
+  - name: PASSWORD
+    prompt: please enter your PASSWORD
+    private: true
+  tasks:
+  - name: print varaibles from prompt 
+    ansible.builtin.debug:
+      msg: "My user name is {{USERNAME}} password is {{PASSWORD}}"
+
+- name: varaibles from inventory
+  hosts: localhost
+  vars:
+    timings: "7:15 IST"
+  tasks:
+  - name: varaibles from inventory
+    ansible.builtin.debug:
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}. Timings are: {{timings}}"
+
+- name: variables from arguments
+  hosts: localhost
+  tasks:
+  - name: get from args
+    ansible.builtin.debug:
+      msg: "Hello {{PERSON}}, Good {{WISHES}}"
+  # $ ansible -i <inventory> -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbook.yaml> -e "PERSON=Ramesh WISHES=Morning" //try to avoid spaces in args varaibles 

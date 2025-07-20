@@ -31,7 +31,7 @@ push vs pull
 3)
 ansible commands:
 ------------------
-$ ansible -i <inventory> -e ansible_user=ec2-user -e ansible_password=DevOps321 
+$ ansible -i <inventory> -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbook.yaml>
 $ ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
 
 $ ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m dnf -a "name=nginx state=installed"

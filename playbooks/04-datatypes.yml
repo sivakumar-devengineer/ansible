@@ -1,0 +1,18 @@
+- name: data types
+  hosts: localhost
+  vars:
+    Course: Devops with AWS
+    Tools:
+      - ansible
+      - terraform
+      - shell
+    Experience:
+      AWS: 2years
+      Terraform: 2 years 
+      Ansible: 1 years
+    RealProject: true
+
+  tasks:
+  - name: print varaivbles 
+    ansible.builtin.debug:
+      msg: "cousrse is {{Course}}"

@@ -1,0 +1,19 @@
+- name: variables
+  hosts: localhost
+  vars:
+    Course: DevOps
+    Trainer: Myself
+    Duration: 100hrs
+  tasks:
+  - name: print play level variables 
+    ansible.builtin.debug:
+      msg: "This course is {{Course}}, and learning {{Tainer}}, duration is {{Duration}}"
+    
+  - name: print varible from task level
+    vars:
+      Course: ansible 
+      Trainer: Siva 
+      Duration: 10Hrs
+      ansible.builtin.debug:
+        msg: "This course is {{Course}}, and learning {{Tainer}}, duration is {{Duration}}"
+
