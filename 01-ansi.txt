@@ -37,6 +37,8 @@ $ ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=Dev
 $ ansible -i 172.31.16.150, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m dnf -a "name=nginx state=installed"
 -b --> become root
 
+$ ansible -i <inventory> -e ansible_user=ec2-user -e ansible_password=DevOps321 <playbook.yaml> -e "PERSON=Ramesh WISHES=Morning"
+
 
 4)
         XML
