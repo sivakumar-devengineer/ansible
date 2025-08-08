@@ -5,6 +5,9 @@ RHEL-9-DevOps-Practice  -- AMI -- DevOps321
 
 AWS -- devops.notes.siva - M.L.......s@9..8
 
+https://www.devopsshack.com/t/u/activeCourses --> M.L.......s@9..8
+
+
 
 
 session-15 - 33 mnts
